@@ -1,0 +1,249 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+div.containerFormulario{
+
+	border-radius: 25px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	background: #f7f7f7;
+}
+
+div.padrefrases span.frases1{
+		top: 20px;
+		position: relative;
+}
+
+div.padrefrases{
+		bottom:  130px;
+}
+div.quienesSomos p{
+	font-size: 18px;
+}
+div.quienesSomos h3{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+div.containerFormulario .form-princ{
+width: 80%;
+overflow: hidden;
+
+
+}
+/*cambiar esto cuando ponga los 5 formulario de 400 a 500%*/
+
+div.containerFormulario .form-princ form{
+	display: flex;
+	width: 500%;
+}
+/*cambiar esto cuando ponga los 5 formulario de 25 a 20%*/
+.form-princ  form div.pagina{
+	width: 20%;
+	transition: margin-left 0.3s ease-in-out;
+}
+
+
+
+ .form-princ form .input-group input{
+
+font-size: 12px;
+
+}
+form h1.titulo{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.progreso .paso .num{
+	border:2px solid #000;
+	border-radius: 50%;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	font-size: 12px;
+	position: relative;
+	line-height: 25px;
+}
+
+
+
+.progreso .paso .num{
+transform: translateX(-50%);
+position: absolute;
+line-height: 25px;
+margin: 2px;
+left: 30%;
+font-weight: 300;
+font-size: 14px;
+
+}
+div.progreso .paso{
+
+position: relative;
+}
+.progreso  .check{
+	position: absolute;
+	left: 15%;
+	top: 70%
+	font-size: 14px;
+	display: none;
+
+}
+
+.progreso .paso .num:before{
+position: absolute;
+content: '';
+width: 30px;
+height: 3px;
+bottom: 11px;
+right: -37px;
+background: #000;
+
+}
+
+.progreso .paso:last-child .num::before{
+display: none;
+
+}
+
+.progreso .paso .num:before{
+ background: red;
+ animation: mov_LInea 0.3s Linear forwards;
+ transform: scaleX(0);
+ transform-origin: left;
+
+}
+
+@keyframes mov_LInea{
+	100%{
+		transform: scaleX(1);
+	}
+
+}
+
+div.pagina img {
+	width: 40%;
+   border-top: 50%;
+}
+
+
+/*=====================================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+======================================================*/
+
+@media (min-width:1200px){
+.imgForm img{
+	width:100%; 
+	height: 100%
+}
+div.padrefrases span.frases1{
+	font-size: 40px;
+}
+div.padrefrases span.frases2{
+	font-size: 40px;
+	top: 15px;
+	position: relative;
+}
+
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+
+
+div.padrefrases span.frases1{
+	font-size: 30px;
+	top: 10px;
+}
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+div.padrefrases span.frases1{
+	font-size: 24px;
+	top: 10px;
+}
+
+
+div.quienesSomos p{
+	font-size: 14px;
+}
+
+div.quienesSomos h3{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+}
+
+/*=============================================
+MOVIL (SM revisamos en 576px)
+=============================================*/
+
+@media (max-width:767px)  and (min-width:576px){
+
+div.quienesSomos p{
+	font-size: 12px;
+}
+
+div.quienesSomos h3{
+	font-size: 14px;
+	font-weight: bold;
+}
+div.padrefrases span.frases1{
+	font-size: 16px;
+	top: 15px;
+	position: absolute;
+}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:575px){
+
+
+div.quienesSomos p{
+	font-size: 12px;
+}
+
+div.quienesSomos h3{
+	font-size: 14px;
+	font-weight: bold;
+}
+div.padrefrases{
+
+	top: 52%;
+	left:   -13%;
+	position: absolute;
+}
+
+div.padrefrases span.frases1{
+		top: 40%;
+		display: none;
+}
+
+}
+

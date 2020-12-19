@@ -1,0 +1,1090 @@
+
+<style>
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("vistas/imagenes/7.jpg");
+  height: 115%;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: pancho;
+  animation-duration: 5s;
+}
+
+@keyframes pancho {
+  0%   { left:1500px;}
+  50%  { left:200px;}
+  100% {  left:0px;}
+}
+</style>
+
+
+
+<!-- Navbar (sit on top) -->
+<div>
+  <div class="w3-bar w3-card " id="myNavbar" style="background: #00d5c3" >
+    <a href="#">
+      <img src="vistas/imagenes/logo/logo.png" width="100" class="logo ">
+      <span class="w3-text-white animate__animated  animate__fadeInDown">Semafaro Laboral</span>
+    </a>
+    <!-- Right-sided navbar links -->
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small mt-4 text-white animate__animated  animate__fadeInDown">
+   
+      <a href="#about" class="w3-bar-item w3-button w3-text-white"><i class="fa fa-th  w3-text-white" style="color: #000"></i> QUIENES SOMOS
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-white"><i class="fa fa-envelope  w3-text-white" style="color: #000"></i> CONTACTO</a>
+
+         <a href="#modalIngreso" data-dismiss="modal" data-toggle="modal"class="w3-bar-item w3-button w3-text-white"><i class="fa fa-user  w3-text-white" style="color: #000"></i> Loging
+      </a>
+         <a href="#modalRegistro" data-dismiss="modal" data-toggle="modal"  class="w3-bar-item w3-button w3-text-white"><i class="fa fa-users  w3-text-white" style="color: #000"></i> Registro
+      </a>
+    </div>
+
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-text-white" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar" >
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">QUIENES SOMOS</a>
+ 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">CONTACTO</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min animate__animated  animate__fadeInDown " id="home">
+  
+  <div class="w3-display-left w3-text-white " style="padding:48px">
+    <span class="animate__animated  w3-jumbo  frases  t">Pancho Te busca Una Oportunidad</span><br>
+    <span class=" frases ">¿Que Éspera Para Unirte ?.</span>
+    <p class="animate__delay-5s animate__animated animate__shakeY" ><a href="#registro"  class="w3-button  w3-padding-large w3-large w3-margin-top w3-hover-opacity-off " style="background:#00feff ">¡Registrate!</a></p>
+  </div> 
+
+
+  </div>
+</header>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:18px 16px" id="about">
+  <h3 class="w3-center ">¿QUIENES SOMOS</h3>
+  <p class="w3-center w3-large ">
+ Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem .</p>
+    </div>
+   
+<div class=" ">
+    <img src="<?php echo $url; ?>vistas/imagenes/6.jpg" class="w3-image w3-greyscale  " style="width:100%; height: 90%">
+  
+</div>
+
+
+<!--registro para usuarios-¡--->
+
+<div class=" container containerFormulario d-flex formulario col-sm-6"  style="justify-content: center;" id="registro">
+
+  <div class=" form-princ">
+
+
+  <form method="post">
+    <!--pagina 1-¡-->
+    <div class="pagina movPag ">
+<h1 class=" text-center titulo">REGISTRO DE USUARIOS</h1>
+
+
+<img src="<?php echo $url ?>vistas/imagenes/progress/1.png" style="width: 25%; border-top: 50%">   
+         <!--nombre completo -¡--> 
+
+        <div class=" input-group mb-3 ">
+          <input type="text" id="regUsuario" name="regUsuario" class="form-control text-uppercase" placeholder="Nombre Completo" required="">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-user"></span>
+            </div>
+          </div>
+        </div>
+
+         <!--cedula o pasaporte -¡-->
+        <div class="input-group mb-3">
+          <input type="text" id="cedulaPasaporte" name="cedulaPasaporte" class="form-control text-uppercase" placeholder="Cédula o Pasaporte" required="" >
+            <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-id-card"></span>
+            </div>
+          </div>
+        </div>
+
+         <!--nacionalidad -¡-->
+        <div class="input-group mb-3">
+          <input type="text" id="nacionalidad" name="nacionalidad" class="form-control text-uppercase" placeholder="Nacionalidad" required="">
+        <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-id-card"></span>
+            </div>
+          </div>
+        </div>
+
+             <!--Ocupacion-¡-->
+    <div class="form-group">
+     <select class="custom-select" name="ocupacion" id="ocupacion" required="">
+     <option>Ninguna De Las Anteriores</option>
+
+ <?php 
+
+ $ocupacion = ControladorUsuario::ctrOcupacion();
+
+ foreach ($ocupacion as $key => $value) {
+
+      echo' <option class="text-uppercase" value="'.$value["ocupacion"].'">'.$value["ocupacion"].'</option>';
+ }
+  ?>
+    </select>
+     </div>
+         <!--Correo -¡-->
+
+        <div class=" input-group mb-3 ">
+          <input type="email"  id="regEmail" name="regEmail" class="form-control" placeholder="Email">
+          <input type="hidden"  name="totalCalicacion" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+
+
+          <!--Password -¡-->
+
+        <div class=" input-group mb-3 ">
+          <input type="password"  id="regPassword" name="regPassword" class="form-control" placeholder="Contraseña">  
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-lock"></span>
+     <i class="fa fa-eye" onclick="myFunction()"
+      style="margin:0px 5px; cursor: pointer; font-size: 14px;
+       display: flex; align-items: center;"></i>
+            </div>
+          </div>
+        </div>
+      
+    
+             <div class="icheck-primary">
+              <input   type="checkbox" id="regPoliticas" >
+              <label for="regPoliticas">
+               Aceptar <a href="#">terminos y condiciones</a>
+               <small>
+             
+
+                <br>
+
+                <a href="<?php echo $url;?>vistas/imagenes/terminos/terminos.pdf" class="iubenda-white iubenda-embed" title="condiciones de uso y políticas de privacidad" target="_blank">Leer más</a>
+
+              </small>
+              </label>
+            </div>
+
+
+      <div class="col-sm-12 campo bnt-group sigPag">
+    <button  type="button" class="btn btn-info">Siguiente</button>        
+      </div>
+    </div> 
+
+ <!--pagina 2-¡-->
+    <div class="pagina">
+  <h3>Califique del(1-10)</h3>
+
+<img src="<?php echo $url ?>vistas/imagenes/progress/2.jpeg" style="width: 25%; border-top: 50%">  
+      <div class="titulo"></div>
+       <!--preguntas y calificaciones-¡-->
+
+       <!--preguntas 1-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion1" name="calificacion1">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+  <!--preguntas 2-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion2" name="calificacion2">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div> 
+
+       <!--preguntas 3-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion3" name="calificacion3">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>  
+
+       <!--preguntas 4-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion4" name="calificacion4">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>     
+  <!--preguntas 5-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion5" name="calificacion5">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+
+
+
+         <div class="campo form-group btns">
+
+        <button type="button" class="volver-pag1 volver btn btn-info">Atras</button> 
+        <button  type="button" class="adelante-pag3 volver adelante btn btn-info">Siguiente</button> 
+
+      </div>
+      </div>
+
+
+ <!--pagina 3-¡-->
+    <div class="pagina">
+
+      <div class="titulo">Califique del(1-10)</div>
+<img src="<?php echo $url ?>vistas/imagenes/progress/3.jpeg" style="width: 25%; border-top: 50%">   
+
+
+       <!--preguntas 6-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion6" name="calificacion6">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+        </div>  
+
+          <!--preguntas 7-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion7" name="calificacion7">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div> 
+
+       <!--preguntas 8-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion8" name="calificacion8">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>      
+
+       <!--preguntas 9-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion9" name="calificacion9">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+       <!--preguntas 10-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion10" name="calificacion10">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+
+         <div class="campo form-group btns">
+        <button type="button" class="volver-pag2 volver btn btn-info">Atras</button> 
+        <button type="button" class="adelante-pag4 volver adelante btn btn-info">Siguiente</button> 
+
+      </div>
+      </div>
+
+
+ <!--pagina 4-¡-->
+    <div class="pagina">
+<h1 class=" text-center titulo" >YA CASI TERMINAS</h1> 
+
+<img src="<?php echo $url ?>vistas/imagenes/progress/4.png" style="width: 25%; border-top: 50%">  
+      <div class="titulo"></div>
+       <!--preguntas y calificaciones-¡-->
+
+       <!--preguntas 11-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion11" name="calificacion11">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+  <!--preguntas 12-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion12" name="calificacion12">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>  
+
+       <!--preguntas 13-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion13" name="calificacion13">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>    
+
+       <!--preguntas 14-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion14" name="calificacion14">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+  <!--preguntas 15-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion15" name="calificacion15">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+
+         <div class="campo form-group btns">
+
+        <button type="button" class="volver-pag3 volver btn btn-info">Atras</button> 
+        <button  type="button" class="adelante-pag5 volver adelante btn btn-info">Siguiente</button> 
+
+      </div>
+      </div>
+
+      
+
+ <!--pagina 5-¡-->
+    <div class="pagina">
+      <div class="titulo">ESTE ES TU ÚLTIMO PASO</div>
+<img src="<?php echo $url ?>vistas/imagenes/progress/5.jpeg" style="width: 25%; border-top: 50%">   
+
+
+       <!--preguntas 16
+        6-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion16" name="calificacion16">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10">10</option>  
+          </select>      
+         </div>
+
+     </div> 
+
+       <!--preguntas 17-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion17" name="calificacion17">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div> 
+
+       <!--preguntas 18-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion18" name="calificacion18">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>  
+
+       <!--preguntas 19-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion19" name="calificacion19">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>   
+
+       <!--preguntas 20-¡-->
+<div class=" form-groud">
+    <label>Valore sus desempeño en su último trabajo.</label>
+  
+         <!--Ocupacion-¡-->
+
+        <div class="campo form-group">
+          <select class="custom-select" id="calificacion20" name="calificacion20">
+            <option value="-1" disabled>Califique Del 1 Al 10</option>
+            <option value="1">1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>  
+            <option value="4" >4</option>  
+            <option value="5" >5</option>  
+            <option value="6" >6</option>  
+            <option value="7" >7</option>  
+            <option value="8" >8</option>  
+            <option value="9" >9</option>  
+            <option value="10" >10</option>  
+          </select>      
+         </div>
+
+     </div>      
+  
+
+         <div class=" campo form-group btns">
+
+        <button type="button" class="volver-pag4 volver btn btn-info">Atras</button> 
+        <button type="submit" class="fin btn btn-info">Finalizar</button> 
+
+      </div>
+  
+ <!-- Modal footer -->
+ 
+
+</div>
+</div>
+</div>
+     <?php
+    $registro = new ControladorUsuario();
+    $registro->ctrRegistroUsuario();
+
+       ?>
+  </form>
+
+ 
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACTOS:</h3>
+  <p class="w3-center  frases" >Nos encantaría hablar con tigo. Envíanos un mensaje:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Panamá, PY</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +(507)269-8620</p>
+        <a href="https://wa.me/message/7IUV4RY3P6KIG1"><p><i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i> Phone: +(507)6787-2768</p></a>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: Pancho@semafarolaboral.com</p>
+    <br>
+   
+
+    <!--formulario -->
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center  w3-padding-64" style="background: #00d5c3" >
+  <a href="#home" class="w3-button w3-black "><i class="fa fa-arrow-up w3-margin-right w3-text-white"></i>Subir</a>
+  <div class="w3-xlarge w3-section">
+   
+   <a href="https://www.facebook.com/britosoft/"> <i class="fa fa-facebook-official w3-hover-opacity w3-text-white"></i></a>
+
+    <a href="https://instagram.com/britosoft?igshid=5i335vllwt2c"><i class="fa fa-instagram w3-hover-opacity w3-text-white"></i></a>
+
+     <a href="https://wa.me/message/7IUV4RY3P6KIG1"><i class="fa fa-whatsapp w3-hover-opacity w3-text-white"></i></a>
+  </div>
+  <p class="w3-text-black encabezado">Desarrollado por  BritoSoft</p>
+</footer>
+ 
+
+
+
+
+
+  <!--=====================================
+     MODAL REGISTRO PARA EMPRESAS
+  ======================================-->
+
+  <div class="container">
+
+  <!-- The Modal -->
+  <div class="modal" id="modalRegistro" >
+    <div class=" modal-content modal-dialog animate__animated  animate__zoomInDown ">
+      <div class="">
+      
+     
+        
+        <!-- Modal  -->
+        <div class="modal-body">
+           <div class="card">
+    <div class="card-body register-card-body">
+      <h2 class="login-box-msg text-center">Registrate</h2>
+
+      <form   method="post" >
+        
+        <div class="input-group mb-3">
+          <input type="text" id="regUsuario" name="regUsuario" class="form-control text-uppercase" placeholder="Nombre Completo" autocomplete="off" >
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email"  id="regEmail" name="regEmail" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+               
+    <input type="password"  class="form-control" name="regPassword" value="FakePSW" id="regPassword" >
+
+     <i class="fa fa-eye" onclick="myFunction()" style="margin:0px 5px; cursor: pointer; font-size: 14px; display: flex; align-items: center;"></i>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("regPassword");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input   type="checkbox" id="regPoliticas" >
+              <label for="regPoliticas"  >
+               Aceptar <a href="#">terminos y condiciones</a>
+               <small>
+                
+                Al registrarse, usted acepta nuestras condiciones de uso y políticas de privacidad
+
+                <br>
+
+                <a href="//www.iubenda.com/privacy-policy/8146355" class="iubenda-white iubenda-embed" title="condiciones de uso y políticas de privacidad">Leer más</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+              </small>
+              </label>
+            </div>
+          </div>
+          
+          <!-- /.col -->
+          <div class="col-4">
+              <?php
+
+        ?>
+            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center">
+        <p>- O -</p>
+      
+     
+    
+
+        </div>
+
+
+      <a href="#modalIngreso" data-dismiss="modal" data-toggle="modal" class="text-center">Login</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+        </div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+  <!---=====================================
+     MODAL INGRESO
+  ======================================-->
+
+  <div class="container">
+
+  <!-- The Modal -->
+  <div class="modal" id="modalIngreso">
+    <div class=" modal-content modal-dialog animate__animated  animate__zoomInDown ">
+      <div class="">
+      
+     
+        
+        <!-- Modal bodyonsubmit="return registroUsuario()" onsubmit="return registroUsuario()" -->
+        <div class="modal-body ">
+           <div class="card">
+    <div class="card-body register-card-body">
+      <h2 class="login-box-msg text-center">Ingresar</h2>
+
+      <form   method="post" >
+        
+        <div class="input-group mb-3">
+
+          <input type="email"  id="ingEmail" name="ingEmail" class="form-control" placeholder="Email" required="" >
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+               
+    <input type="password"  class="form-control" name="ingPassword" value="FakePSW" id="ingPassword" required="">
+
+  
+
+  
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+
+          
+          <!-- /.col -->
+          <div class="col-4">
+              <?php
+
+    $Ingreso = new ControladorUsuario();
+    $Ingreso->ctrIngresoUsuario();
+
+        ?>
+            <button type="submit" class="btn btn-primary btn-block btnIngreso">Ingresar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center">
+        <p>- O -</p>
+      
+     
+
+        </div>
+
+      <a href="#modalRegistro" data-dismiss="modal" data-toggle="modal" class="text-center">Registrate</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+        </div>
+        <br>
+
+        <center>
+          
+          <a href="#modalPassword" data-dismiss="modal" data-toggle="modal">¿Olvidaste tu contraseña?</a>
+
+        </center>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+  <!---=====================================
+     MODAL ORVIDÓ CONTRASEÑA
+  ======================================-->
+
+  <div class="container">
+
+  <!-- The Modal -->
+  <div class="modal" id="modalPassword">
+    <div class=" modal-content modal-dialog animate__animated  animate__zoomInDown ">
+      <div class="">
+      
+     
+        
+        <!-- Modal bodyonsubmit="return registroUsuario()" onsubmit="return registroUsuario()" -->
+        <div class="modal-body">
+           <div class="card">
+    <div class="card-body register-card-body">
+      <h2 class="login-box-msg text-center">Recuperar Contraseña</h2>
+
+      <form   method="post" >
+        
+        <div class="input-group mb-3">
+          <input type="email"  id="passEmail" name="passEmail" class="form-control" placeholder="Email" >
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fa fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+       
+        
+        <div class="row">
+
+          
+          <!-- /.col -->
+          <div class="col-4">
+              <?php
+
+  
+
+        ?>
+            <button type="submit" class="btn btn-primary btn-block btnIngreso">Recuperar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center">
+        <p>- O -</p>
+      
+
+        </div>
+
+      <a href="#modalRegistro" data-dismiss="modal" data-toggle="modal" class="text-center">Registrate</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+        </div>
+        <br>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
